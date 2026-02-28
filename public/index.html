@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- GDGoCBowenChallenge Day 11 -->
+    <title>Animated Dashboard Card</title>
+  </head>
+  <body
+    class="min-h-screen flex justify-center items-center bg-gradient-to-br from-fuchsia-200 to-fuchsia-300"
+  >
+    <section
+      class="group bg-white shadow-lg hover:shadow-2xl hover:scale-105 p-8 rounded-xl w-80 transition-all duration-300 ease-in-out hover:ring-2 hover:ring-violet-600"
+    >
+      <div
+        class="h-1 w-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-t-xl mb-4"
+      ></div>
+      <div class="flex flex-col items-center gap-4">
+        <div
+          class="relative w-16 h-16 flex items-center justify-center bg-purple-100 rounded-full transition-all duration-300 group-hover:bg-purple-200"
+        >
+          <div
+            id="spinner"
+            class="absolute w-10 h-10 border-4 border-fuchsia-400 border-t-transparent rounded-full animate-spin transition-opacity duration-500"
+          ></div>
+          <svg
+            id="icon"
+            class="w-10 h-10 text-purple-600 transition-colors duration-300 group-hover:text-blue-600 opacity-0"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9 17v-6h6v6M12 3v4m0 0l3-3m-3 3L9 4"
+            ></path>
+          </svg>
+        </div>
+        <h2
+          class="text-lg font-bold text-gray-800 transition-all duration-300 group-hover:text-fuchsia-600"
+        >
+          System Analysis Report
+        </h2>
+        <p
+          id="statusText"
+          class="text-gray-500 transition-all duration-500 text-center"
+        >
+          Downloading report, sit back and relax...
+        </p>
+        <svg
+            id="complete"
+            class="w-6 h-6 opacity-0 transition-opacity duration-500 text-green-500"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+            />
+          </svg>
+      </div>
+    </section>
+  </body>
+  <script src="script.js"></script>
+</html>
